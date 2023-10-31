@@ -1,0 +1,56 @@
+<style>
+    .container
+    {
+        position:absolute;
+        display: flex;
+        flex-direction: row;
+        top:100px;
+        left:100px;
+        background-color: #1877F2;
+        border-radius: 5px;
+    }
+    .imagine
+    {
+        width:20px;
+        height: 20px;
+    }
+    .buton
+    {
+        width:35px;
+        height:20px;
+        color:white;
+    }
+    .numarul
+    {
+        width:20px;
+        height: 20px;
+        color:white;
+    }
+</style>
+
+
+<div class="container">
+    <div class="imagine">
+        <img src="images/like.png" width="20" height="20">
+    </div>
+    <div class="buton" onclick="add(+1);afiseaza();">Like</div>
+    <div class="numarul" id="numarul"></div>
+</div>
+
+<script>
+
+    var numarulDiv = document.getElementById('numarul');
+        
+     var numarul = 0;
+    
+    function add(direction)
+    {
+        numarul = numarul + direction;
+    }
+    
+    function afiseaza()
+    {
+        numarulDiv.innerHTML = numarul;
+    }
+    
+</script>
